@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Custom Font Replacer",
+  "version": "1.0.0",
+  "description": "Replace fonts on any website with your favorite Google Fonts",
+  "permissions": ["storage", "scripting"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Custom Font Replacer"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
